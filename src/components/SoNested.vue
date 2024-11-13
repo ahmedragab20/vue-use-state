@@ -6,7 +6,7 @@ const { count, increment } = useCounter();
 <template>
     <div class="counter-container">
         <h3>SoNested</h3>
-        <p>{{ count?.x }}</p>
+        <p>{{ count }}</p>
         <button @click="increment">Increment</button>
     </div>
 </template>

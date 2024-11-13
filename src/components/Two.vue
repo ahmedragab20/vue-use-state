@@ -6,11 +6,11 @@ const { count, increment } = useCounter();
 <template>
     <div class="counter-container">
         <h3>Two</h3>
-        <p>{{ count?.x }}</p>
+        <p>{{ count }}</p>
         <button @click="increment">Increment</button>
         <div class="dispose-input-container">
-            <input v-if="typeof count?.x === 'number'" class="dispose-input" type="number" v-model="count.x" />
-            <p v-else>count?.x is undefined</p>
+            <input v-if="typeof count === 'number'" class="dispose-input" type="number" v-model="count" />
+            <p v-else>count? is undefined</p>
         </div>
     </div>
 

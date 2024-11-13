@@ -23,7 +23,7 @@ console.log(mapKey, useState(mapKey).value);
   <div class="content">
     <h1>Rsbuild with Vue</h1>
     <p>Start building amazing things with Rsbuild.</p>
-    <p>App.vue: {{ count?.x }}</p>
+    <p>App.vue: {{ count }}</p>
     <div class="counters-container">
       <One />
       <Two />
