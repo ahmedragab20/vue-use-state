@@ -14,26 +14,19 @@ export function useState<T>(...args: unknown[]): Ref<T> {
     typeof args[0] === 'string' ? `${prefix}${args[0]}` : `${prefix}${uuid()}`;
 
   if (!(_key in state)) {
-    if (args.length === 1) {
-      state[_key] = unref(args[0]);
-    } else {
-      state[_key] = unref(
-        typeof args[1] === 'function'
+    state[_key] = unref(
+      args.length === 1
+        ? args[0]
+        : typeof args[1] === 'function'
           ? (args[1] as () => T | Ref<T>)()
           : args[1],
-      );
-    }
+    );
   }
   return toRef(state, _key) as Ref<T>;
 }
 
 export function disposeState(key: string) {
   const _key = `${prefix}${key}`;
-  console.log({
-    _key,
-    state,
-  });
-
   if (!(_key in state)) {
     console.warn(`State with key ${key} not found`);
     return;
