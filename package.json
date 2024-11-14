@@ -1,6 +1,6 @@
 {
   "name": "vue-use-state",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Ahmed Ragab <ahmedragab20901@gmail.com>",
   "repository": {
     "type": "git",
@@ -21,7 +21,9 @@
     }
   },
   "description": "A wrapper for the Vue reactivity APIs you love, making them global and easily accessible across the app. It ensures that the APIs retain their natural behavior while being fully typed for a great user experience.",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "rslib build",
