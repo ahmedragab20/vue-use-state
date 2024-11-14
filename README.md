@@ -97,7 +97,7 @@ type Key14Type =  Ref<Reactive<ShallowReactive<Readonly<{
 }>>>, Reactive<...>>
 ```
 
-> **You can use any of the Vue reactivity APIs as a state, and they will be reactive and typed as expected regardless of how deep or shallow the state is. Whether it's a ref, plain value, or just anything, it will work seamlessly! Just treat it as a wrapper that only wraps a state without affecting any of its default behavior.**
+> You can use any of Vue’s reactivity APIs as state, and they’ll remain fully reactive and properly typed, no matter how simple or complex the state structure is. Whether it’s a ref, a plain value, or a deeply nested object, everything works seamlessly. Think of it as a lightweight wrapper that enhances your state management without impacting its default behaviour
 
 ## APIs
 
