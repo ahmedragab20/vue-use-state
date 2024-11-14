@@ -13,7 +13,7 @@ import {
   shallowRef,
   shallowReactive,
   shallowReadonly,
-} from 'vue';
+} from '@vue/reactivity';
 
 describe('useState', () => {
   beforeEach(() => {
