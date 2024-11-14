@@ -41,6 +41,11 @@ describe('useState', () => {
     const initialReadonly = readonly({ count: 0 });
     const stateRef = useState('readonly', initialReadonly);
     expect(stateRef.value.count).toBe(0);
+
+    // Attempt to change the value
+    // @ts-expect-error readonly
+    stateRef.value.count = 1;
+    expect(stateRef.value.count).toBe(0);
   });
 
   it('should initialize state with a shallowRef', () => {
@@ -58,6 +63,11 @@ describe('useState', () => {
   it('should initialize state with a shallowReadonly object', () => {
     const initialShallowReadonly = shallowReadonly({ count: 0 });
     const stateRef = useState('shallowReadonly', initialShallowReadonly);
+    expect(stateRef.value.count).toBe(0);
+
+    // Attempt to change the value
+    // @ts-expect-error readonly
+    stateRef.value.count = 1;
     expect(stateRef.value.count).toBe(0);
   });
 
