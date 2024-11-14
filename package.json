@@ -1,21 +1,52 @@
 {
-  "name": "rsbuild-vue3-ts",
-  "private": true,
-  "version": "1.0.0",
-  "scripts": {
-    "build": "rsbuild build",
-    "check": "biome check --write",
-    "dev": "rsbuild dev --open",
-    "format": "biome format --write",
-    "preview": "rsbuild preview"
+  "name": "vue-use-state",
+  "version": "0.0.1",
+  "author": "Ahmed Ragab <ahmedragab20901@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmedragab20/vue-use-state"
   },
-  "dependencies": {
-    "vue": "^3.5.12"
-  },
+  "module": "./dist/index.js",
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
-    "@rsbuild/core": "^1.0.19",
-    "@rsbuild/plugin-vue": "^1.0.3",
-    "typescript": "^5.6.3"
+    "@rslib/core": "^0.0.18",
+    "@types/node": "^22.8.1",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "description": "A wrapper for the Vue reactivity APIs you love, making them global and easily accessible across the app. It ensures that the APIs retain their natural behavior while being fully typed for a great user experience.",
+  "files": ["dist"],
+  "license": "MIT",
+  "scripts": {
+    "build": "rslib build",
+    "check": "biome check --write",
+    "dev": "rslib build --watch",
+    "format": "biome format --write",
+    "test": "vitest run"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@vue/reactivity": "^3.5.12"
+  },
+  "keywords": [
+    "vue",
+    "reactivity",
+    "state",
+    "global",
+    "composable"
+  ],
+  "homepage": "https://github.com/ahmedragab20/vue-use-state",
+  "bugs": {
+    "url": "https://github.com/ahmedragab20/vue-use-state/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

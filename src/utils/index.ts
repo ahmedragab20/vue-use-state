@@ -1,7 +1,8 @@
 export function uuid(): string {
   const timestamp = new Date().getTime();
-  const randomValues = new Uint8Array(16);
-  window.crypto.getRandomValues(randomValues);
+  const randomValues = new Array(16)
+    .fill(0)
+    .map(() => Math.floor(Math.random() * 256));
   randomValues[6] = (randomValues[6] & 0x0f) | 0x40;
   randomValues[8] = (randomValues[8] & 0x3f) | 0x80;
   const timestampHex = timestamp.toString(16).padStart(12, '0');
