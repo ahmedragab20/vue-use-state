@@ -1,21 +1,4 @@
-import {
-  reactive,
-  toRef,
-  isRef,
-  isReactive,
-  shallowRef,
-  ref,
-  shallowReactive,
-  readonly,
-  isReadonly,
-  isShallow,
-  shallowReadonly,
-  computed,
-  type Ref,
-  type ComputedRef,
-} from '@vue/reactivity';
 import { uuid } from './utils';
-
 /**
  * A prefix used for state keys.
  * @type {string}
