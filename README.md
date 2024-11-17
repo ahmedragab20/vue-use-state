@@ -3,7 +3,6 @@
 A wrapper for the Vue reactivity APIs you love, making them global and easily accessible across the app. It ensures that the APIs retain their natural behavior while being fully typed for a great user experience. 💚
 
 [![npm version](https://img.shields.io/badge/NPM_Home_Page-brightgreen)](https://www.npmjs.com/package/vue-use-state)
-[![Install size](https://packagephobia.com/badge?p=vue-use-state)](https://packagephobia.com/result?p=vue-use-state)
 
 ## Installation
 

@@ -43,7 +43,6 @@ describe('useState', () => {
     expect(stateRef.value.count).toBe(0);
 
     // Attempt to change the value
-    // @ts-expect-error readonly
     stateRef.value.count = 1;
     expect(stateRef.value.count).toBe(0);
   });
@@ -66,7 +65,6 @@ describe('useState', () => {
     expect(stateRef.value.count).toBe(0);
 
     // Attempt to change the value
-    // @ts-expect-error readonly
     stateRef.value.count = 1;
     expect(stateRef.value.count).toBe(0);
   });
