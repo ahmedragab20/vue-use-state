@@ -1,6 +1,6 @@
 {
   "name": "vue-use-state",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Ahmed Ragab <ahmedragab20901@gmail.com>",
   "repository": {
     "type": "git",
@@ -12,7 +12,6 @@
     "@rslib/core": "^0.0.18",
     "@types/node": "^22.8.1",
     "typescript": "^5.6.3",
-    "unplugin-auto-import": "^0.18.4",
     "vitest": "^2.1.4"
   },
   "exports": {
