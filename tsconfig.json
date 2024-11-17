@@ -12,4 +12,5 @@
     "allowImportingTsExtensions": true,
   },
   "include": ["src", "./auto-imports.d.ts"],
+  "exclude": ["playground"]
 }
